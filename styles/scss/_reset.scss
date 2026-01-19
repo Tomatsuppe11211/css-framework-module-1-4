@@ -1,0 +1,45 @@
+@use "myVariables";
+@use "myMixins";
+
+@use "sass:map";
+@use "sass:color";
+
+
+.reset-form{
+    @include myMixins.padding(2rem, 5rem, 2rem, 5rem);
+    @include myMixins.rounded(1rem);
+    @include myMixins.shadow();
+    margin-top: map.get(myVariables.$spacing, "section");
+    background: map.get(myVariables.$colors, "primary");
+    color: map.get(myVariables.$colors, "text");
+
+
+    h1{
+        font-size: map.get(myVariables.$colors, "title");
+    }
+
+    p,label, input{
+        font-size: map.get(myVariables.$sizes, "paragraph");
+        margin-top: map.get(myVariables.$spacing, "text");
+    }
+
+    input{
+        @include myMixins.insetShadow();
+        @include myMixins.rounded(0.5rem);
+        @include myMixins.padding(0.2rem, 0, 0.2rem, 1rem)
+    }
+
+    button{
+        @include myMixins.padding(1rem, 5rem, 1rem, 5rem);
+        @include myMixins.rounded(1.5rem);
+        
+        font-size: map.get(myVariables.$sizes, "header");
+        margin-top: map.get(myVariables.$spacing, "button");
+        background: map.get(myVariables.$colors, "button");
+
+        &:hover{
+            background: color.adjust(map.get(myVariables.$colors, "button"), $lightness: 10%);
+        }
+    }
+}
+

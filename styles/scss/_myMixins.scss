@@ -1,0 +1,19 @@
+@use "myVariables";
+@use "sass:map";
+
+
+@mixin padding($top: 0, $right: 0, $down: 0, $left: 0){
+    padding: $top $right $down $left;
+}
+
+@mixin rounded($radius){
+    border-radius: $radius;
+}
+
+@mixin insetShadow(){
+    box-shadow: inset 0.2rem 0.2rem;
+}
+
+@mixin shadow(){
+    box-shadow: 0.2rem 0.4rem 0.4rem map.get(myVariables.$colors, "button");
+}
