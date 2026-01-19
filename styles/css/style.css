@@ -11867,6 +11867,9 @@ textarea.form-control-lg {
   background: #98c8f8;
   color: #000;
 }
+.reset-form h1 {
+  font-size: 30px;
+}
 .reset-form p, .reset-form label, .reset-form input {
   font-size: 20px;
   margin-top: 1rem;
@@ -11885,6 +11888,49 @@ textarea.form-control-lg {
 }
 .reset-form button:hover {
   background: rgb(250.1377245509, 197.3473053892, 143.8622754491);
+}
+
+.darkForm {
+  padding: 2rem 4rem 2rem 4rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  background: #2d2d2d;
+  color: #fff;
+}
+.darkForm h1 {
+  font-size: 30px;
+}
+.darkForm label, .darkForm .typed {
+  margin-top: 1rem;
+  font-size: 20px;
+}
+.darkForm .typed {
+  background: #5c5c5c;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+.darkForm .typed:focus {
+  border: solid #ffc413;
+}
+.darkForm .typed::placeholder {
+  color: #c8c8c8;
+}
+.darkForm button {
+  background: #ffc413;
+  font-size: 25px;
+  margin-top: 2rem;
+  padding: 1rem 3rem 1rem 3rem;
+  border-radius: 1rem;
+}
+.darkForm button:hover {
+  background: rgb(255, 208.75, 70);
+}
+.darkForm .typed, .darkForm button, .darkForm label {
+  width: 75%;
+}
+.darkForm textarea {
+  height: 10rem;
 }
 
 /*# sourceMappingURL=style.css.map */

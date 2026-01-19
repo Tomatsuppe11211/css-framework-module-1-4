@@ -1,0 +1,48 @@
+@use "sass:map";
+@use "sass:color";
+@use "myVariables";
+@use "myMixins";
+
+
+
+.darkForm{
+    @include myMixins.padding(2rem, 4rem, 2rem, 4rem);
+    margin-top: map.get(myVariables.$spacing, "section");
+    margin-bottom: map.get(myVariables.$spacing, "section");
+    background: map.get(myVariables.$darkFormColors, "background");
+    color: map.get(myVariables.$darkFormColors, "text");
+
+    h1{font-size: map.get(myVariables.$sizes, "title");}
+
+    label, .typed{
+        margin-top: map.get(myVariables.$spacing, "text");
+        font-size: map.get(myVariables.$sizes, "paragraph");
+    }
+
+    .typed{
+        background: map.get(myVariables.$darkFormColors, "input");
+        color: map.get(myVariables.$darkFormColors, "text");
+        @include myMixins.rounded(0.5rem);
+        @include myMixins.padding(0.5rem, 1rem, 0.5rem, 1rem);
+
+        &:focus{border: solid map.get(myVariables.$darkFormColors, "button");}
+    }
+
+    .typed::placeholder{color: map.get(myVariables.$darkFormColors, "placeholder");}
+
+    button{
+        background: map.get(myVariables.$darkFormColors, "button");
+        font-size: map.get(myVariables.$sizes, "header");
+        margin-top: map.get(myVariables.$spacing, "button");
+        @include myMixins.padding(1rem, 3rem, 1rem, 3rem);
+        @include myMixins.rounded(1rem);
+
+        &:hover{
+            background: color.adjust(map.get(myVariables.$darkFormColors, "button"), $lightness: 10%);
+        }
+    }
+
+    .typed, button, label{width: 75%;}
+
+    textarea{height: 10rem;}
+}

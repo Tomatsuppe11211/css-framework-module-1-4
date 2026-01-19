@@ -15,7 +15,7 @@
 
 
     h1{
-        font-size: map.get(myVariables.$colors, "title");
+        font-size: map.get(myVariables.$sizes, "title");
     }
 
     p,label, input{
