@@ -4,5 +4,24 @@
   },
   "devDependencies": {
     "sass": "^1.97.2"
-  }
+  },
+  "name": "css-framework-module-1-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass styles/scss:styles/css --style=compressed",
+    "watch": "sass styles/scss:styles/css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tomatsuppe11211/css-framework-module-1-4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tomatsuppe11211/css-framework-module-1-4/issues"
+  },
+  "homepage": "https://github.com/Tomatsuppe11211/css-framework-module-1-4#readme"
 }
